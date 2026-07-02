@@ -1,6 +1,6 @@
 # consulta-mortal
 Cuarto Challenge en The Huddle, web scraping + db.
-# 📚 Consulta Mortal
+# Consulta Mortal
 
 > *"Infiltrarte en el criminalmente desactualizado sitio Books To Scrape y exponer verdades oscuras."*
 
@@ -8,25 +8,25 @@ Mini pipeline de datos real que simula un flujo completo: **Scraping → Enrique
 
 ---
 
-## 🧩 Descripción
+## Descripción
 
 **Consulta Mortal** es un challenge de datos desarrollado como parte del programa de formación **Penguin Academy**. El proyecto consiste en scrapear el sitio [Books to Scrape](http://books.toscrape.com/), enriquecer los datos mediante APIs externas y persistirlos en una base de datos relacional, para luego analizarlos mediante consultas SQL avanzadas.
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
-- **Python 3.13**
+- **Python**
 - **Jupyter Notebook**
 - **requests** — Peticiones HTTP
 - **BeautifulSoup4** — Parsing de HTML
-- **SQLite3** — Base de datos relacional
+- **SQLite** — Base de datos relacional
 - **Open Library API** — Enriquecimiento de autores
 - **Wikipedia REST API** — Obtención de nacionalidades
 
 ---
 
-## 📐 Diagrama UML
+## Diagrama UML
 
 El diagrama entidad-relación de la base de datos se encuentra incluido en el Jupyter Notebook, generado con [DrawDB](https://drawdb.vercel.app/) a partir del DDL del proyecto.
 
@@ -38,7 +38,7 @@ El diagrama entidad-relación de la base de datos se encuentra incluido en el Ju
 
 ---
 
-## 🔄 Pipeline
+## Pipeline
 
 El pipeline es **idempotente**: puede ejecutarse múltiples veces sin generar duplicados gracias al uso de `INSERT OR IGNORE` y restricciones `UNIQUE` en la base de datos.
 
@@ -53,7 +53,7 @@ El pipeline es **idempotente**: puede ejecutarse múltiples veces sin generar du
 
 ---
 
-## 📊 Consultas SQL
+## Consultas SQL
 
 El notebook incluye 5 consultas comentadas:
 
@@ -65,7 +65,7 @@ El notebook incluye 5 consultas comentadas:
 
 ---
 
-## ⚡ Indexación y Performance
+## Indexación y Performance
 
 Se demuestra el impacto de los índices en el rendimiento de las consultas:
 
@@ -77,7 +77,7 @@ Se demuestra el impacto de los índices en el rendimiento de las consultas:
 
 ---
 
-## 🚀 Instalación y ejecución
+## Instalación y ejecución
 
 ### 1. Clonar el repositorio
 
@@ -105,11 +105,11 @@ Abrí `consulta_mortal.ipynb` en Jupyter Notebook y ejecutá las celdas **en ord
 7. Actualización de nacionalidades
 8. Consultas SQL
 
-> ⚠️ El pipeline puede tardar entre 45 y 90 minutos dependiendo de la disponibilidad de las APIs externas.
+> El pipeline puede tardar entre 45 y 90 minutos dependiendo de la disponibilidad de las APIs externas.
 
 ---
 
-## ⚠️ Limitaciones conocidas
+## Limitaciones conocidas
 
 - **Variabilidad en resultados**: Las consultas que dependen de APIs externas pueden variar ligeramente entre ejecuciones debido a timeouts y disponibilidad de los servidores.
 - **País no disponible directamente**: Open Library no provee el campo país en su endpoint de búsqueda. Se obtiene mediante Wikipedia API usando la descripción del autor.
@@ -118,7 +118,7 @@ Abrí `consulta_mortal.ipynb` en Jupyter Notebook y ejecutá las celdas **en ord
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
-**Fede** — Estudiante de Penguin Academy  
-Challenge desarrollado como parte del programa de formación en Data Science.
+**Fede Alarcón Scura** — Estudiante de Penguin Academy  
+Challenge desarrollado como parte del programa de formación.
